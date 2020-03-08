@@ -1,0 +1,67 @@
+body{
+    background-color: cornsilk;
+    height: 2000px;
+}
+
+#antet{
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    height: 120px;   
+    position: relative;
+}
+
+#logo{
+    position: absolute;
+    margin-top: 10px;
+}
+
+#trf{
+    background-color: rgb(61, 63, 68);
+    width: 100%;
+    height: 600px;   
+    position: relative;
+    
+}
+
+#trf h1{
+    font-size: 40px;
+    position: absolute;
+    top:30%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right: 0;
+}
+
+#meniu li{
+    display: inline-block;
+    padding-left: 10px;
+    float: right;
+    margin-top: 90px;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+#meniu li a{
+    text-decoration: none;
+    color: white;
+}
+
+#mediu{
+    background-color: darkgreen;
+    width: 100%;
+    position: relative;
+    height: 400px;
+    margin-top: 10px;
+}
+
+#circles li{
+    background-color: lightblue;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin-right: 200px;
+}
