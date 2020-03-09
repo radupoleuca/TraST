@@ -8,35 +8,85 @@
         </title>
     </head>
     <body>
-        <div id="antet">
-             <div id="logo"><img src="logo.png"></div>
-             <div id="meniu">  
+        <header>
+             <div id="logo"><img src="logooo.png"></div>
+             <nav class="meniu">  
                 <ul>
-                    <li><a href="default.asp">HOME</a></li>
-                    <li><a href="news.asp">NEWS</a></li>
-                    <li><a href="contact.asp">CONTACT</a></li>
-                    <li><a href="about.asp">ABOUT</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">COUNTRY</a>
+                        <div class="dropdown-content">
+                            <a href="#"><img src=rom1.png class="miniimg">ROMANIA</a>
+                            <a href="#"><img src=sua1.png class="miniimg">SUA</a>
+                        </div>
+                    </li>
+                    <li><a href="login.html">LOGIN</a></li>
                   </ul>    
-             </div>
-        </div>  
+             </nav>
+        </header>  
 
-        <div id="prezentare">
-            <div id="trf"> 
-                <h1>Aici punem titlul...</h1>
+        <div id="container">
+        <section class="prezentare">
+            <h1>Traffic Signs Tutor</h1>
+            <img src="driving6.jpg" onclick="TimerSwitch(this)">
+        </section>
+        <br>
+        <hr>
+        <h1 class="titlu-mediu">MEDIU DE INVATARE</h1>
+        <hr>
+        <section class="mediu">
+            <div class="box">
+                    <div class="title-box">SEMNE RUTIERE</div>
+                    <img src="semn.jpg" class="img-box">
             </div>
-            
+            <div class="box">
+                    <div class="title-box"></div>
+                    <img src="traffic.gif" class="img-box">
+            </div>
+            <div class="box">
+                    <div class="title-box">REGULI DE CIRCULATIE</div>
+                    <img src="pri3.jpg" class="img-box">
+            </div>
+        </section>
+
+        <section class="progress-bar">
+            <div class="bar"> 40% Complete (success) </div>
+
+        </section>
+
+        <section id="about">
+            <h2>ABOUT</h2>
+            <p> &nbsp &nbsp &nbsp  &nbspI'm a paragraph. Click here to add your own text and edit me.
+                 It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. 
+                 Feel free to drag and drop me anywhere you like on your page.
+                 I’m a great place for you to tell a story and let your users know a little more about you.​This is a great space
+                  to write long text about your company and your services. 
+                  You can use this space to go into a little more detail about your company. 
+                  Talk about your team and what services you provide. Tell your visitors the story of how you came up with the
+                   idea for your business and what makes you different from your competitors. Make your company stand out and 
+                   show your visitors who you are.</p>
+
+        </section>
+
+        <section class="contor">
+           <table class="tbl">
+               <tr>
+                   <td>345</td>
+                   <td rowspan="2">Clasament</td>
+                   <td>456</td>
+               </tr>
+               <tr>
+                   <td>Utilizatori logati</td>
+                   
+                   <td>Utilizatori inregistrati</td>
+               </tr>
+           </table>
+        </section>
         </div>
 
-        <div id="mediu">
-            <div id="circles">
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
-
-        <div></div>
+        <footer>
+            <p>Acesta a fost website ul nostru :)</p>
+        </footer>
 
     </body>
 </html>
