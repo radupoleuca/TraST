@@ -1,0 +1,114 @@
+h2{
+   position: absolute;
+    text-align: center;
+
+ vertical-align: middle;
+    
+}
+.backTitlu{
+    display: flex;
+   justify-content: center;
+   
+    position: relative;
+    margin-top: 5%;
+    background-color: tomato;
+    align-content: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 300px;
+}
+.imaginePrincipala{
+    position:absolute;
+    width: 200px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.curbaS{
+    position: relative;
+    border: rgb(49, 48, 48);
+    border-style: double;
+    background-color:wheat;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    margin-top: 10%;
+    overflow: auto;
+}
+.curbaT{
+    position: relative;
+    border: rgb(49, 48, 48);
+    border-style: double;
+    background-color:wheat;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    margin-top: 5px;
+    overflow: auto;
+}
+.img{
+   position: absolute;
+   text-align: left;
+   height: 100px;
+   width: 120px;
+   
+   bottom: 0;
+}
+.curbaD{
+    position: relative;
+    border: rgb(49, 48, 48);
+    border-style: double;
+    background-color:rgb(250, 232, 129);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    overflow: auto;
+    margin-top: 5px;
+}
+.img2{
+    position: absolute;
+   right: 0;
+   height: 100px;
+   width: 120px;
+   bottom: 0;
+}
+.p2{
+    position: absolute;
+    right: 120px;
+     font-size: 20px;
+}
+.p1{ 
+    position: absolute;
+    left: 120px;
+     font-size: 20px;
+}
+.antet{
+   
+    background-color: white;
+    position: relative;
+    height: 70px;
+    width: 100%;
+}
+
+.contact1{
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    left: 4%;
+    
+}
+.contact2{
+    
+    position: absolute;
+    font-size: 14px;
+    left: 4%;
+    top:50%;
+}
+.imgicon{
+    position: absolute;
+    width: 50px;
+    bottom: 0;
+    height: 50px;
+}

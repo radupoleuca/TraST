@@ -159,6 +159,11 @@ vertical-align: middle;
     line-height: 50px;  
 }
 
+ a{
+    text-decoration: none;
+    color: black;
+}
+
 .progress-bar{
     margin-top:20px;
     width: 80%;
