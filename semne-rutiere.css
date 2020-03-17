@@ -83,25 +83,24 @@ nav li:first-child a{
 }
 
 #categorii{
-    background-color: bisque;
+    background-color: rgb(238, 235, 235);
     width: 100%;
-    height: 1000px;
+    height: auto;
     margin-top: 20px;
 }
 
 .flex-container{
    display: flex;
    flex-flow: row wrap;
-   background-color: bisque;
    align-items: center;
    justify-content: center;
 }
 
-.flex-container > div{
+.flex-container  > .box{
     border: 2px solid black;
     text-align: center;
     margin: 20px;
-    font-size: 30px;
+    font-size: 20px;
     height: 350px;
     width: 280px;
     position: relative;
@@ -110,20 +109,32 @@ nav li:first-child a{
 .img-box{
     width: 100%; 
     height: 100%;
+    opacity: 0.9;
 }
 
+/*
+ box-shadow: 0 4px 8px 0 green, 0 6px 8px 0 blue;
+ transform: scale(1.02);
+*/
+
 .title-box{
-    width: 100%; 
-    height: auto;
+    border-top: 2px solid black;
+    width: 100%;
     position: absolute;
     bottom: 0;
     background-color: rgb(190, 33, 33);
-    opacity: 1;
-    font-size: 22px;
-    text-align: center; 
+    text-align: center;  
+    display: table-cell;
+    vertical-align: middle;
 }
 
 a{
     text-decoration: none;
     color: black;
 }
+
+.img-box:hover{
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 green, 0 6px 8px 0 blue;
+}
+
