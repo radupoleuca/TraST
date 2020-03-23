@@ -124,8 +124,6 @@ nav li:first-child a{
     bottom: 0;
     background-color: rgb(190, 33, 33);
     text-align: center;  
-    display: table-cell;
-    vertical-align: middle;
 }
 
 a{
@@ -136,5 +134,7 @@ a{
 .img-box:hover{
     opacity: 1;
     box-shadow: 0 4px 8px 0 green, 0 6px 8px 0 blue;
+    -webkit-filter: contrast(1);
+  filter: contrast(1);
 }
 
