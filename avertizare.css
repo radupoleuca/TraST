@@ -1,5 +1,41 @@
+.navigator{
+    position: fixed;
+    height: 0px;
+    width: 300px;
+    background-color:rgb(39, 38, 38);
+    right:5%;
+    top:0;
+
+}
+ul{
+    position: relative;
+    background-color: rgb(39, 38, 38);
+    padding:0;
+    overflow: hidden;
+    list-style-type:none;
+}
+li{
+    position: relative;
+    float: left;
+}
+li a{
+    
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+.homebtn{
+  
+    background-color:tomato;
+}
+li a:hover:not(.homebtn){
+  
+    background-color: rgb(49, 48, 48);
+}
+
 h2{
-   position: absolute;
+   
     text-align: center;
 
  vertical-align: middle;
@@ -83,6 +119,11 @@ h2{
     position: absolute;
     left: 120px;
      font-size: 20px;
+}
+.tmp{
+    position: absolute;
+    font-size: 20px;
+    left:40%;
 }
 .antet{
    
