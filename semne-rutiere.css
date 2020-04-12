@@ -100,6 +100,7 @@ nav li:first-child a{
     border: 2px solid black;
     text-align: center;
     margin: 20px;
+    margin-bottom: 40px;
     font-size: 20px;
     height: 350px;
     width: 280px;
@@ -109,7 +110,6 @@ nav li:first-child a{
 .img-box{
     width: 100%; 
     height: 100%;
-    opacity: 0.9;
 }
 
 /*
@@ -120,10 +120,19 @@ nav li:first-child a{
 .title-box{
     border-top: 2px solid black;
     width: 100%;
+    height: 14%;
     position: absolute;
     bottom: 0;
     background-color: rgb(190, 33, 33);
     text-align: center;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 a{
@@ -131,10 +140,49 @@ a{
     color: black;
 }
 
-.img-box:hover{
-    opacity: 1;
-    box-shadow: 0 4px 8px 0 green, 0 6px 8px 0 blue;
-    -webkit-filter: contrast(1);
-  filter: contrast(1);
+.box{
+    opacity: 0.9;
 }
 
+.box:hover{
+    opacity: 1;
+    box-shadow: 0 0 2px 1px rgb(0, 113, 128), 0 0 2px 1px blue;
+    -webkit-filter: contrast(1);
+    filter: contrast(1);
+}
+
+.box:hover > .progress-bar{
+    opacity: 1;
+    box-shadow: 0 0 2px 1px  rgb(0, 113, 128), 0 0 2px 1px blue;
+    -webkit-filter: contrast(1);
+    filter: contrast(1);
+}
+
+.progress-bar{
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1.5px solid black;
+    background-color: gray;
+    margin-top: 0px;
+    position: absolute;
+    height: 20px;
+    bottom: -30px;
+}
+
+.bar{
+    width: 40%;
+    height: 100%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar p{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+    text-align: center;
+}

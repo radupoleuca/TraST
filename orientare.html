@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="backTitlu">
-        <h2>Indicatoare de orientare!</h2>
-    </div> 
-    <div class="curbaS">
+    
+    <header>
+        <div id="logo"><img src="logooo.png"></div>
+        <nav class="meniu">  
+           <ul>
+               <li><a href="index.html">HOME</a></li>
+               <li><a href="index.html#about">ABOUT</a></li>
+               <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">COUNTRY</a>
+                   <div class="dropdown-content">
+                       <a href="#"><img src=rom1.png class="miniimg">ROMANIA</a>
+                       <a href="#"><img src=sua1.png class="miniimg">SUA</a>
+                   </div>
+               </li>
+               <li><a href="login.html">LOGIN</a></li>
+             </ul>    
+        </nav>
+   </header>  
+
+   <div class="titlu">
+       <h1>Indicatoare de orientare</h1>
+   </div>
+
+    <div class="curbaT">
         <img src="orientare/1.jpg" class="img" >
         
         <p class="p1">Presemnalizarea directiilor la o intersectie de drumuri din afara localitatii - Este instalat la 100-200 m de o intersectie de drumuri. In general, se instaleaza la intersectii de drumuri judetene, nationale sau la intersectii de drumuri nationale cu drumuri judetene.</p>
@@ -116,20 +135,19 @@
  
  <p class="p1">Confirmarea directiei de mers spre localitati mai importante si distantele pana la acestea - Poate fi intalnit la iesirea dintr-un oras sau un municipiu; indica distanta pe care o are de parcurs un conducator de vehicul pentru a ajunge intr-una din localitatile inscriptionata pe panou. Denumirile localitatilor se scriu in ordinea descrescatoare a distantelor.</p>
 </div>
-
-       <div class="antet">
-        <img src="telicon.jpg" class="imgicon" >
-          <p class="contact1"> Contact: Senegeac Catalin-Florin: 074458394. </p>
-          <p class="contact2"> Contact2: Poleuca Radu-Vasile: 075737485.   </p>     
-       </div>  
-       <div class="navigator">
-        <ul>
-            <li><a class="homebtn" href="#home">Home</a></li>
-            <li><a href="#Up">Up</a></li>
-            <li><a href="#Down">Down</a></li>
-            <li><a href="#Help">Help</a></li>    
-        </ul>
-        </div>    
+<form>
+        
+    <h2>Lasati un comentariu!</h2>
+    <label for="name"><b><i>Nume si prenume:</i></b></label>
+    <input type="text" placeholder="Popescu Georgel" name="name" required>
+    <label for="email" ><b><i>Email:</i></b></label>
+    <input type="mail" placeholder="popescu@gmail.com"  name="email" required>
+    <br>
+    <textarea class="comment">Scrie propriul comentariu aici...</textarea>
+    <br>
+    <button type="submit" class="logBott">Trimite comentariu</button>
+    
+  </form>
 
 </body>
 </html>

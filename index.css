@@ -81,12 +81,14 @@ nav li:first-child a{
     margin-right: 5px;
     margin-left:2px;
 }
+/*----------------------------*/
 
 .prezentare{
     width: 100%;
     height: 600px;   
     margin-top: 10px;
     text-align: center;
+    position: relative;
 }
 
 .prezentare img{
@@ -95,8 +97,8 @@ nav li:first-child a{
     border-radius: 20px;
 }
 
-.prezentare h1 {
-    top: 20%;
+.titlu {
+    top: 10%;
     left: 0;
     right: 0;
     font-size: 60px;
@@ -104,10 +106,87 @@ nav li:first-child a{
     color: black;
     text-shadow: 3px 3px white;
 }
-/*
-display: table-cell;
-vertical-align: middle;
-*/
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+}
+
+.dot {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+}
+
+.dots{
+    bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+  }
+  
+  
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+
+.mySlides:nth-of-type(2) .titlu{
+    margin-left:75%;
+}
+
+
+.mySlides:nth-of-type(3) .titlu{
+    margin-right:75%;
+}
+
 
 .titlu-mediu{
     text-align: center;
@@ -222,7 +301,7 @@ a{
 }
 
 footer{
-    height: 20px;
+    height: 10px;
     width: 100%;
     margin-top: 10px;
 }
@@ -230,3 +309,5 @@ footer{
 footer p{
     text-align: center;
 }
+
+
