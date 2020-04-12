@@ -1,0 +1,100 @@
+.titlu{
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.corp-chestionar{
+    background-color:rgb(238, 235, 235);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.corp-chestionar > .mini-container{
+    border: 1px solid black;
+    background-color: rgba(211, 202, 202, 0.945);
+    margin: 10px;
+    height: 350px;
+    width: 70%;
+    position: relative;
+}
+
+.mini-container:nth-child(1){
+    height: 40px;
+    margin-bottom: 0;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-container:nth-child(2){
+    height: 120px;
+    margin-top: 0;
+    border-top: none;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-container:nth-child(3){
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-container:nth-child(4){
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagine{
+   right: 10px;
+   height: 100px;
+   width: 120px;
+   margin-top: auto;
+   margin-bottom: auto;
+   position: absolute;
+}
+
+.paragraf{ 
+    right: 140px;
+    left: 10px;
+    font-size: 20px;
+    position: absolute;
+    text-indent: 30px;
+}
+
+.raspuns{
+    display: block;
+    margin-left:10px;
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto; 
+}
+
+.buton-raspuns{
+    height: 30px;
+    width: 40px; 
+    vertical-align: middle;
+
+}
+
+.optiune{
+    display: inline-block;
+    margin-right: 40px;
+    
+}
