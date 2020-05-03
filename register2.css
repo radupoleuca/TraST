@@ -1,0 +1,53 @@
+body{
+    background-color:rgb(204, 197, 197);
+    font-family: Arial;
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    position: relative;
+    background-color:white;
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border:5px solid rgb(31, 2, 2);
+    padding:15px 18px;
+}
+
+
+input[type=text]{
+    display: block;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+    padding: 12px 20px;
+}
+
+
+.submt{
+    position: absolute;
+    background-color:darkblue;
+    color:white;
+    border:none;
+    width: auto;
+    padding:15px 30px;
+    margin:10px 0;
+    bottom: 0%;
+    left: 3%;
+}
+
+.cancelb{
+    position: absolute;
+    background-color: rgb(194, 27, 27);
+    color:white;
+    border:none;
+    width: auto;
+    padding:15px 30px;
+    margin:10px 0;
+    bottom: 0%;
+    right: 3%;
+}
