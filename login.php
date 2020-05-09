@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,33 +10,29 @@
 <body>
     
     <form action="login.php" method="POST">
-        <div class="log">
+       
             <h2>Welcome!</h2>
+
+             <!-- display validation errors here -->
+                   <?php include('errors.php'); ?> 
 			
             <label for="email"><b><i>Email:</i></b></label>
             <input type="text" placeholder="Email" name="email" required>
 			
-             <label for="pasw" ><b><i>Password:</i></b></label>
-             <input type="password" placeholder="Password" name="password" required>
+             <label for="parola" ><b><i>Password:</i></b></label>
+             <input type="password" placeholder="Parola" name="parola" required>
 			 
-             <button type="submit" class="logBott">Login</button>
+             <button type="submit" class="logButton" name="log_user">Login</button>
 			 
-
-             // cu sau fara checkbox?
-             <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me!
-             </label>
-			 
-            <button type="button" class="register" name="login_user">Login</button>
-			 
-        </div>
-        <h3>Click on Register for create an account!</h3>
-        <div class="cancel_div">
-            <button type="button" class="cancelbutton">Cancel</button>
-            <span class="pasw">Forgot <a href="#">password?</a></span>
-
-        </div>
         
+             <p class="question">Forgot <a href="#">password?</a></p>
+
+            <h3>Click on Register for create an account!</h3>
+
+            <button type="button" class="register" ><a href="register.php">Register</a></button>
+
+        
+
     </form>
 </body>
 </html>
