@@ -1,5 +1,5 @@
-<script>
-var newSlide;
+
+            var newSlide;
 
             var slideIndex = 1;
             showSlides(slideIndex);
@@ -30,4 +30,3 @@ var newSlide;
               dots[slideIndex-1].className += " active";
               newSlide = setInterval(plusSlides, 4000);
             }
-			</script>

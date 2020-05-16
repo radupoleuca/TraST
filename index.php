@@ -1,46 +1,20 @@
 <?php include ('db_connect.php') ?>
 <?php include('server.php') ?>
+<?php include('return_user_id.php') ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="index.css">
-		<link rel="stylesheet" type="text/css" href="antet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
             TraST
         </title>
     </head>
     <body>
         <header>
-             <div id="logo"><img src="imagini/logooo.png"></div>
-             <nav class="meniu">  
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="index.php#about">About</a></li>
-                    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Country</a>
-                        <div class="dropdown-content">
-                            <a href="#"><img src="imagini/rom1.png" class="miniimg">Romania</a>
-                            <a href="#"><img src="imagini/sua1.png" class="miniimg">SUA</a>
-                        </div>
-                    </li>
-                    <li>
-                      <a href="#contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <?php if(isset($_SESSION['email'])): ?>
-                            <?php include('online_users.php') ?>
-                            <a href="logout.php">Logout</a>
-                        <?php else: ?>
-                            <?php 
-                            $ses = session_id();
-                            $sql4    = "DELETE FROM users_status WHERE session='$ses'"; 
-                            $result4 = mysqli_query($conn, $sql4); ?>
-                            <a href="login.php">Login</a>
-                        <?php endif; ?>
-                    </li>
-                  </ul>    
-             </nav>
+            <?php include('header.php') ?>
         </header>  
 
         <div id="container">
@@ -80,40 +54,7 @@
             <span class="dot" onclick="currentSlide(4)"></span> 
         </div>
 
-        <script>
-            var newSlide;
-
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n= +1) {
-                slideIndex = slideIndex + n;
-                showSlides(slideIndex);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              clearInterval(newSlide);
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-              newSlide = setInterval(plusSlides, 4000);
-            }
-
-            </script>
+        
 
         <hr>
         <h1 class="titlu-mediu">MEDIU DE INVATARE</h1>
@@ -122,19 +63,47 @@
             <div class="box">
                     <div class="title-box"><a href="semne-rutiere.php" target="_self">SEMNE RUTIERE</a></div>
                     <a href="semne-rutiere.php" target="_self"> <img src="imagini/semn.jpg" class="img-box"></a>
+                    <form method="POST" action="butoane_reset.php"><div class="buton-reset"><input type="submit" id="btn-reset-1" name="buton1" value="Reset progres"></div></form>
             </div>
             <div class="box">
-                    <div class="title-box"><a href="codul-rutier.php" target="_self">CODUL RUTIER</a></div>
-                    <a href="codul-rutier.php" target="_self"><img src="imagini/traffic.gif" class="img-box"></a>
+                    <div class="title-box"><a href="codul_rutier_bun.php" target="_self">CODUL RUTIER</a></div>
+                    <a href="codul_rutier_bun.php" target="_self"><img src="imagini/traffic.gif" class="img-box"></a>
+                    <form method="POST" action="butoane_reset.php"><div class="buton-reset"><input type="submit" id="btn-reset-2" name="buton2" value="Reset progres"></div></form>
             </div>
             <div class="box">
                     <div class="title-box"><a href="chestionare.php" target="_self">CHESTIONARE</a></div>
                     <a href="chestionare.php" target="_self"><img src="imagini/pri3.jpg" class="img-box"></a>
+                    <form method="POST" action="butoane_reset.php"><div class="buton-reset"><input type="submit" id="btn-reset-3" name="buton3" value="Reset progres"></div></form>
             </div>
         </section>
 
         <section class="progress-bar">
-            <div class="bar"> 40% Complete (success) </div>
+            <div class="bar"> 
+            <?php
+            if(isset($_SESSION['email']))
+            {
+                // calculez progresul total -> pentru bara de progres
+                $id = return_id();
+                $sql = "SELECT progres_avertizare + progres_prioritate + progres_interzicere + progres_temporare + progres_orientare + progres_obligare + progres_informare + progres_aditionale + progres_dgenerale + progres_vehicule + progres_conducatorii + progres_semnalizare + progres_reguli + progres_infractiuni + progres_raspunderea + progres_cai + progres_atributii + progres_dfinale AS total FROM users_progress WHERE user_id='$id'";
+                $query = mysqli_query($conn, $sql); 
+                $result = $query->fetch_assoc(); 
+                $rezultat = $result['total'];
+     
+                $sql2    = "UPDATE users_progress SET progres_total='$rezultat' WHERE user_id='$id'"; 
+                $query2 = mysqli_query($conn, $sql2); 
+      
+                if($rezultat != 1800): ?>
+                  
+                 <style> .bar{width:  <?php echo $rezultat/100*5.5; ?>%; } </style>
+                 <?php echo $rezultat/100*5.5 . "%" ; ?>
+                 <?php  else: ?>
+             <style> .bar{width: 100%; } </style>
+             <?php echo "100% Complet"; ?>
+             <?php  endif; 
+             }
+              else {?>  <style> .bar{ width: 100%; background-color: green; } </style> 
+                <?php echo "Pentru a-ti inregistra progresul, trebuie sa intri in cont!";  }?>
+            </div>
 
         </section>
 
@@ -171,11 +140,45 @@
                </tr>
            </table>
         </section>
-        </div>
+     </div>
 
-        <footer>
-            
-        </footer>
+    <script type="text/javascript" src="index.js"></script>
 
     </body>
+
 </html>
+
+<?php
+if(isset($_SESSION['email']))
+    {
+    // calculez progresul din semne-rutiere; daca este 800, atunci toate capitolele au fost terminate si apare optiunea de resetare (delete)
+    $id2 = return_id();
+    $sql2 = "SELECT progres_avertizare + progres_prioritate + progres_interzicere + progres_temporare + progres_orientare + progres_obligare + progres_informare + progres_aditionale AS total_semne_rutiere FROM users_progress WHERE user_id='$id'";
+    $query2 = mysqli_query($conn, $sql2); 
+    $result2 = $query2->fetch_assoc(); 
+    $rezultat2 = $result2['total_semne_rutiere'];
+     
+    if($rezultat2 == 800): ?>
+        <style> .buton-reset {z-index: 1;} .box:hover #btn-reset-1{ display: block; } </style>
+    <?php  endif;  
+    
+    // calculez progresul din codul-rutier; daca este 1000, atunci toate capitolele au fost terminate si apare optiunea de resetare (delete)  
+    
+    $id3 = return_id();
+    $sql3 = "SELECT progres_dgenerale + progres_vehicule + progres_conducatorii + progres_semnalizare + progres_reguli + progres_infractiuni + progres_raspunderea + progres_cai + progres_atributii + progres_dfinale AS total_cod_rutier FROM users_progress WHERE user_id='$id'";
+    $query3 = mysqli_query($conn, $sql3); 
+    $result3 = $query3->fetch_assoc(); 
+    $rezultat3 = $result3['total_cod_rutier'];
+     
+    if($rezultat3 == 1000): ?>
+        <style> .buton-reset {z-index: 1;} .box:hover #btn-reset-2{ display: block; } </style>
+    <?php  endif; 
+    } 
+?>
+
+
+
+
+
+
+

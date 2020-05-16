@@ -5,34 +5,14 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="chestionare.css">
-        <link rel="stylesheet" type="text/css" href="antet.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
             Chestionare
         </title>
     </head> 
     <body>
         <header>
-             <div id="logo"><img src="imagini/logooo.png"></div>
-             <nav class="meniu">  
-                <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="index.php#about">ABOUT</a></li>
-                    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">COUNTRY</a>
-                        <div class="dropdown-content">
-                            <a href="#"><img src="imagini/rom1.png" class="miniimg">ROMANIA</a>
-                            <a href="#"><img src="imagini/sua1.png" class="miniimg">SUA</a>
-                        </div>
-                    </li>
-					<li><a href="#contact.html">Contact</a></li>
-                      <li>
-                        <?php if(isset($_SESSION['email'])): ?>
-                            <a href="logout.php">Logout</a>
-                        <?php else: ?>
-                            <a href="login.php">Login</a>
-                        <?php endif; ?>
-                    </li>
-                  </ul>    
-             </nav>
+              <?php include('header.php') ?>
         </header> 
 
         <section class="titlu">

@@ -5,31 +5,11 @@
 <head>
     <title>Panouri aditionale</title>
     <link rel="stylesheet" type="text/css" href="avertizare.css">
-	<link rel="stylesheet" type="text/css" href="antet.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header>
-        <div id="logo"><img src="imagini/logooo.png"></div>
-        <nav class="meniu">  
-           <ul>
-               <li><a href="index.php">HOME</a></li>
-               <li><a href="index.php#about">ABOUT</a></li>
-               <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">COUNTRY</a>
-                   <div class="dropdown-content">
-                       <a href="#"><img src="imagini/rom1.png" class="miniimg">ROMANIA</a>
-                       <a href="#"><img src="imagini/sua1.png" class="miniimg">SUA</a>
-                   </div>
-               </li>
-			   <li><a href="#contact.html">Contact</a></li>
-               <li><?php if(isset($_SESSION['email'])): ?>
-                            <a href="logout.php">Logout</a>
-                        <?php else: ?>
-                            <a href="login.php">Login</a>
-                        <?php endif; ?>
-						</li>
-             </ul>    
-        </nav>
+         <?php include('header.php') ?>
    </header>  
    
    <div class="progress-container">
@@ -129,7 +109,7 @@
     </div>
     
 	 <form method="post" action="capitolTerminat.php">
-		<input class="buton-verif" type="submit" name="progres-aditionale" value="Capitol terminat">  
+		<input class="buton-verif" type="submit" name="progres-aditionale" value="Finalizeaza capitol">  
 	</form>
 
 	<div class="form-comment">

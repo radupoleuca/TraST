@@ -1,69 +1,73 @@
+<?php include('server.php') ?>
+<?php include ('db_connect.php') ?>
+<?php include('return_user_id.php') ?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="codul-rutier.css">
-		<link rel="stylesheet" type="text/css" href="antet.css">
-        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+        <link rel="stylesheet" type="text/css" href="codul_rutier_bun.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>
             TraST
         </title>
     </head> 
     <body>
         <header>
-             <div id="logo"><img src="imagini/logooo.png"></div>
-             <nav class="meniu">  
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="index.html#about">ABOUT</a></li>
-                    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">COUNTRY</a>
-                        <div class="dropdown-content">
-                            <a href="#"><img src="imagini/rom1.png" class="miniimg">ROMANIA</a>
-                            <a href="#"><img src="imagini/sua1.png" class="miniimg">SUA</a>
-                        </div>
-                    </li>
-					<li><a href="#contact.html">Contact</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
-                  </ul>    
-             </nav>
+            <?php include('header.php') ?>
         </header>  
 
         <div id="container">
 
-            <section class="partea-stanga">
-                <div class="titlu-partea-stanga">
+            <div id="partea-stanga">
+
+                <button class="collapsible">
                     <h1>CODUL RUTIER</h1>
-                </div>
+                </button>
 
                 <div class="lista">
                     <ol>
-                        <li class="lst"><a href="#pg1">Dispozitii generale</a> <img id="im1" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg2">Vehiculele</a><img id="im2" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg3">Conducatorii de vehicule</a><img id="im3" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg4">Semnalizarea rutiera</a><img id="im4" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg5">Reguli de circulatie</a><img id="im5" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg6">Infractiuni si pedepse</a><img id="im6" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg7">Raspunderea <br> contraventionala</a><img id="im7" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg8">Cai de atac impotriva <br>procesului verbal</a><img id="im8" src="imagini/verif.png"></li>
-                        <li class="lst"><a href="#pg9">Atributii ale unor ministere si ale  altor autoritati</a><img id="im9" src="imagini/verif.png"></li> 
-                        <li class="lst"><a href="#pg10">Dispozitii finale si anexa</a><img id="im10" src="imagini/verif.png"></li>
+                        <li class="lst" id="im1"><a href="#pg1">Dispozitii generale</a> </li>
+                        <li class="lst" id="im2"><a href="#pg2">Vehiculele</a></li>
+                        <li class="lst" id="im3"><a href="#pg3">Conducatorii de vehicule</a></li>
+                        <li class="lst" id="im4"><a href="#pg4">Semnalizarea rutiera</a></li>
+                        <li class="lst" id="im5"><a href="#pg5">Reguli de circulatie</a></li>
+                        <li class="lst" id="im6"><a href="#pg6">Infractiuni si pedepse</a></li>
+                        <li class="lst" id="im7"><a href="#pg7">Raspunderea contraventionala</a></li>
+                        <li class="lst" id="im8"><a href="#pg8">Cai de atac impotriva procesului verbal</a></li>
+                        <li class="lst" id="im9"><a href="#pg9">Atributii ale unor ministere si ale  altor autoritati</a> </li> 
+                        <li class="lst" id="im10"><a href="#pg10">Dispozitii finale si anexa</a></li>
+
                     </ol>
                 </div>
-                
+             
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
 
-            </section>
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                        });
+                    }
+                </script>
+                    
+                  
+            </div>
 
-            <section class="partea-dreapta">
+            <div id="partea-dreapta">
                 
                     <div class="text">
 
                         <span id="pg1">
-                            
-                            <script>
-                             
-                             
-                            </script>
-
                             <div class="titlu-partea-dreapta">
                                 <h1>DISPOZITII GENERALE</h1>
                             </div>
@@ -153,7 +157,10 @@
                             <li><i>zonă rezidenţială - </i>perimetrul dintr-o localitate unde se aplică reguli speciale de circulaţie, având intrările şi ieşirile semnalizate în conformitate cu prevederile legale.</li>
                             </ol>
 
-                            <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(1)" />
+                            <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-dgenerale" value="Finalizeaza capitol" onclick="showImage(1)">  
+                            </form>
+                          
                         </span>
 
                         <span id="pg2">
@@ -252,7 +259,9 @@
                             <h3>Art. 19</h3>
                             <p>Procedura înmatriculării, înregistrării, radierii şi eliberarea autorizaţiei de circulaţie provizorie sau pentru probe a vehiculelor se stabilesc prin ordin al ministrului administraţiei şi internelor, care se publică în Monitorul Oficial al României, Partea I.</p>
                         
-                            <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(2)" />
+                            <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-vehicule" value="Finalizeaza capitol" onclick="showImage(2)">  
+                            </form>
                         </span>
 
                         <span id="pg3">
@@ -395,7 +404,9 @@
                             <h3>Art. 28</h3>
                                 <p>Evidenţa permiselor de conducere reţinute şi a sancţiunilor aplicate conducătorilor de autovehicule, tractoare agricole sau forestiere ori tramvaie se ţine de către poliţia rutieră, în condiţii stabilite prin ordin al ministrului internelor şi reformei administrative.</p>
                            
-                                <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(3)" />
+                                <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-conducatorii" value="Finalizeaza capitol" onclick="showImage(3)">  
+                            </form>
                         </span>
 
                         <span id="pg4">
@@ -478,7 +489,9 @@
                             <h3>Art. 34</h3>
                             <p>Condiţiile de circulaţie pe viaducte şi în tunele, precum şi semnalizarea acestora se stabilesc prin regulament, în conformitate cu reglementările tehnice în vigoare.</p>
                       
-                             <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(4)" />
+                            <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-semnalizare" value="Finalizeaza capitol" onclick="showImage(4)">  
+                            </form>
                             </span>
 
                             <span id="pg5">
@@ -842,7 +855,9 @@
                                     <li>Permisele de conducere naţionale eliberate de autorităţile prevăzute la alin. (1), precum şi cele a căror valabilitate este recunoscută de România în mod unilateral, deţinute de persoane care au domiciliul sau reşedinţa în România în sensul art. 231 alin. (2), pot fi preschimbate cu documente similare româneşti, în condiţiile stabilite prin ordin al ministrului afacerilor interne, care se publică în Monitorul Oficial al României, Partea I.</li>
                                 </ol>
 
-                                <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(5)" />
+                                <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-reguli" value="Finalizeaza capitol" onclick="showImage(5)">  
+                            </form>
                             </span>
 
                             <span id="pg6">
@@ -900,7 +915,9 @@
                                 <h3>Art. 94</h3>
                                 <p>Abrogat</p>
 
-                                <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(6)" />
+                                <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-infractiuni" value="Finalizeaza capitol" onclick="showImage(6)">  
+                            </form>
                             </span>
 
                             <span id="pg7">
@@ -1385,7 +1402,9 @@
                                     <li>Pentru oprirea forţată sau imobilizarea în cazurile prevăzute la alin. (1) şi (2), poliţia rutieră poate utiliza dispozitive speciale omologate.</li>
                                     <li>Procedura de imobilizare a vehiculelor în cazurile prevăzute la alin. (1) şi (2) se stabileşte prin regulament.</li>
                                 </ol>
-                                <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(7)" />
+                                <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-raspunderea" value="Finalizeaza capitol" onclick="showImage(7)">  
+                            </form>
 
                             </span>
 
@@ -1419,13 +1438,15 @@
                                     <li>Abrogat</li>
                                     <li>Executarea sancţiunii contravenţionale complementare se prescrie în acelaşi termen în care se prescrie sancţiunea contravenţională principală.</li>
                                 </ol>
-                                <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(8)" />
+                                <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-cai" value="Finalizeaza capitol" onclick="showImage(8)">  
+                            </form>
                             </span>
 
                                 <span id="pg9" onscroll="scrolled(this)">
 
                                     <div class="titlu-partea-dreapta">
-                                        <h1>ATRIBUTII ALE UNOR MINISTERE SI ALE ALTOR <br> &nbsp &nbsp AUTORITATI ALE ADMINISTRATIEI PUBLICE</h1>
+                                        <h1>ATRIBUTII ALE UNOR MINISTERE SI ALE ALTOR  AUTORITATI ALE ADMINISTRATIEI PUBLICE</h1>
                                     </div>
 
                                     <h3>Art. 122</h3>
@@ -1517,7 +1538,10 @@
 
                                     <h3>Art. 130</h3>
                                     <p>Orele de educaţie rutieră din instituţiile de învăţământ preşcolar, primar şi gimnazial se desfăşoară potrivit programei aprobate prin ordin comun al ministrului educaţiei şi cercetării şi al ministrului administraţiei şi internelor, care se publică în Monitorul Oficial al României, Partea I.</p>
-                                    <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(9)" />
+                                    
+                                    <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-atributii" value="Finalizeaza capitol" onclick="showImage(9)">  
+                            </form>
                                 </span>
                                 
                                 <span id="pg10">
@@ -1611,61 +1635,165 @@
                                     </ol>
 
                                     <h3>Anexa 2: indicatoare rutiere</h3>
-                                    <input class="buton-verif" type="button" value="Capitol terminat" onclick="showImage(10)" />
+                                    <form method="post" action="capitolTerminat.php">
+                                <input class="buton-verif" type="submit" name="progres-dfinale" value="Finalizeaza capitol" onclick="showImage(10)">  
+                            </form>
                                     </span>
                         </div>
             
                 </div>
                 
-            </section>
+                        </div>
 
         </div>
-
         
-
+        <script type="text/javascript" src="img_visibility_cod.js"></script>
     </body>
 </html>
 
-<script>
-	
+<?php
+    if(isset($_SESSION['email']))
+    {
+        $id = return_id();
+        $sql = "SELECT progres_dgenerale FROM users_progress WHERE user_id='$id'";
+        $result = mysqli_query($conn, $sql); 
+        $count  = mysqli_num_rows($result); 
+        if ($count != "0")
+        {
+            $row = $result->fetch_assoc();
+            $rezultat = $row['progres_dgenerale'];
+            if($rezultat == 100): ?>
+                <style> #im1{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im1{ background-image: none; } </style>
+        <?php endif; 
+        } 
 
-    function showImage(n){
-        if(n==1)
-        document.getElementById('im1').style.visibility="visible";
-        else
-        if(n==2)
-        document.getElementById('im2').style.visibility="visible";
-        else
-        if(n==3)
-        document.getElementById('im3').style.visibility="visible";
-        else
-        if(n==4)
-        document.getElementById('im4').style.visibility="visible";
-        else
-        if(n==5)
-        document.getElementById('im5').style.visibility="visible";
-        else
-        if(n==6)
-        document.getElementById('im6').style.visibility="visible";
-        else
-        if(n==7)
-        document.getElementById('im7').style.visibility="visible";
-        else
-        if(n==8)
-        document.getElementById('im8').style.visibility="visible";
-        else
-        if(n==9)
-        document.getElementById('im9').style.visibility="visible";
-        else
-        if(n==10)
-        document.getElementById('im10').style.visibility="visible";
+        $sql1 = "SELECT progres_vehicule FROM users_progress WHERE user_id='$id'";
+        $result1 = mysqli_query($conn, $sql1); 
+        $count1  = mysqli_num_rows($result1); 
+        if ($count1 != "0")
+        {
+            $row1 = $result1->fetch_assoc();
+            $rezultat1 = $row1['progres_vehicule'];
+            if($rezultat1 == 100): ?>
+                <style> #im2{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im2{ background-image: none; } </style>
+        <?php endif; 
+        }
+
+        $sql2 = "SELECT progres_conducatorii FROM users_progress WHERE user_id='$id'";
+        $result2 = mysqli_query($conn, $sql2); 
+        $count2  = mysqli_num_rows($result2); 
+        if ($count2 != "0")
+        {
+            $row2 = $result2->fetch_assoc();
+            $rezultat2 = $row2['progres_conducatorii'];
+            if($rezultat2 == 100): ?>
+                <style> #im3{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im3{ background-image: none; } </style>
+        <?php endif; 
+        }
+            
+        $sql3 = "SELECT progres_semnalizare FROM users_progress WHERE user_id='$id'";
+        $result3 = mysqli_query($conn, $sql3); 
+        $count3  = mysqli_num_rows($result3); 
+        if ($count3 != "0")
+        {
+            $row3 = $result3->fetch_assoc();
+            $rezultat3 = $row3['progres_semnalizare'];
+            if($rezultat3 == 100): ?>
+                <style> #im4{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im4{ background-image: none; } </style>
+        <?php endif; 
+        } 
+
+        $sql4 = "SELECT progres_reguli FROM users_progress WHERE user_id='$id'";
+        $result4 = mysqli_query($conn, $sql4); 
+        $count4  = mysqli_num_rows($result4); 
+        if ($count4 != "0")
+        {
+            $row4 = $result4->fetch_assoc();
+            $rezultat4 = $row4['progres_reguli'];
+            if($rezultat4 == 100): ?>
+                <style> #im5{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im5{ background-image: none; } </style>
+        <?php endif; 
+        }
+
+        $sql5 = "SELECT progres_infractiuni FROM users_progress WHERE user_id='$id'";
+        $result5 = mysqli_query($conn, $sql5); 
+        $count5  = mysqli_num_rows($result5); 
+        if ($count5 != "0")
+        {
+            $row5 = $result5->fetch_assoc();
+            $rezultat5 = $row5['progres_infractiuni'];
+            if($rezultat5 == 100): ?>
+                <style> #im6{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im6{ background-image: none; } </style>
+        <?php endif; 
+        }        
+        
+        $sql6 = "SELECT progres_raspunderea FROM users_progress WHERE user_id='$id'";
+        $result6 = mysqli_query($conn, $sql6); 
+        $count6  = mysqli_num_rows($result6); 
+        if ($count6 != "0")
+        {
+            $row6 = $result6->fetch_assoc();
+            $rezultat6 = $row6['progres_raspunderea'];
+            if($rezultat6 == 100): ?>
+                <style> #im7{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im7{ background-image: none; } </style>
+        <?php endif; 
+        }
+            
+        $sql7 = "SELECT progres_cai FROM users_progress WHERE user_id='$id'";
+        $result7 = mysqli_query($conn, $sql7); 
+        $count7  = mysqli_num_rows($result7); 
+        if ($count7 != "0")
+        {
+            $row7 = $result7->fetch_assoc();
+            $rezultat7 = $row7['progres_cai'];
+            if($rezultat7 == 100): ?>
+                <style> #im8{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im8{ background-image: none; } </style>
+        <?php endif; 
+        } 
+
+        $sql8 = "SELECT progres_atributii FROM users_progress WHERE user_id='$id'";
+        $result8 = mysqli_query($conn, $sql8); 
+        $count8  = mysqli_num_rows($result8); 
+        if ($count8 != "0")
+        {
+            $row8 = $result8->fetch_assoc();
+            $rezultat8 = $row8['progres_atributii'];
+            if($rezultat8 == 100): ?>
+                <style> #im9{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im9{ background-image: none; } </style>
+        <?php endif; 
+        }
+
+        $sql9 = "SELECT progres_dfinale FROM users_progress WHERE user_id='$id'";
+        $result9 = mysqli_query($conn, $sql9); 
+        $count9  = mysqli_num_rows($result9); 
+        if ($count9 != "0")
+        {
+            $row9 = $result9->fetch_assoc();
+            $rezultat9 = $row9['progres_dfinale'];
+            if($rezultat9 == 100): ?>
+                <style> #im10{ background-image :url('imagini/verif.png'); } </style>
+            <?php  else: ?>
+                <style> #im10{background-image: none; } </style>
+        <?php endif; 
+        }         
     }
-
-
-    /*$('#pg9').animate({scrollTop: $('#pg9')[0].scrollHeight});
-    /*$('#pg9').animate({scrollTop: $('#pg9')[0].scrollHeight});
-    var elem = $('#pg9');
-if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) {
-console.log('ojhgc');}*/
-
-</script>
+        
+?>

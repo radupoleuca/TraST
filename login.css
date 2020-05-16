@@ -22,7 +22,8 @@ label{
 
 form{
     background-color:white;
-    width: 500px;
+    max-width: 500px;
+    width: auto;
     min-height: 420px;
     height: auto;
     margin-left: auto;
@@ -44,8 +45,7 @@ form{
 .register{
     background-color:green;
     width: auto;
-    padding:15px 20px;
-      
+    padding:15px 20px;   
 }
 
 button:hover {
@@ -62,13 +62,15 @@ h3{
     text-size-adjust: 1px;
 }
 
+/*
   @media screen and (max-width: 300px) {
     span.psw {
        display: block;
        float: none;
     }
     .cancelbtn {
+     
        width: 100%;
     }
-
+  }
     

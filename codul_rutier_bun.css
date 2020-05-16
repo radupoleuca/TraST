@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+}
+
+#container{
+    background-color: white;
+    width:100%;
+    height: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#container > div {
+    margin: 10px;
+    padding: 20px;
+}
+
+#partea-stanga{
+    flex: 1;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+
+#partea-dreapta{
+    flex: 3.2;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 1vw;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    margin-left: 25px;
+    font-size: 22px;
+}
+
+.titlu-partea-dreapta{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.lista ol{
+    list-style-type: none;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    background-color: rgb(63, 237, 243);
+    border: 1px solid black;
+  
+}
+
+.lista li:hover{
+    background-color: rgb(83, 192, 196);
+}
+
+.text{
+    font-size: 15px;
+}
+
+.text span {
+    display:none;
+}
+
+.text span:target {
+    display:block;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(190, 33, 33);
+}
+p{
+    padding:.3em .5em .1em 2em;
+    white-space: normal;
+    text-indent: 20px;
+}
+
+h3{
+    padding:.3em .2em .1em 1em;
+  
+}
+
+.tip_a{
+   padding-left: 3em;
+   list-style-type: lower-alpha;
+}
+
+.text li{
+    padding:.3em .2em .1em 0em;
+}
+
+
+.lista li {
+	margin: 0;
+	padding: 16px 16px 16px 45px;
+	list-style: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+    background-size: 25px;
+    
+}
+
+
+
+.buton-verif{
+    margin-left:40%;
+    margin-right: 40%;
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: green;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    #container{
+        flex-direction: column;
+    }
+
+    #container > div {
+        margin: 10px;
+        padding: 5px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #partea-dreapta{
+        margin-top: 20px;
+        flex: none;
+    }
+ 
+    #partea-stanga{
+        position: static;
+        align-self: initial;
+        flex: none;
+    }
+
+    .lista {
+        max-height: 0;
+        overflow: hidden;
+    } 
+
+    .lst{
+        font-size: 15px;
+    }
+
+    .lista li{
+        margin-bottom: 5px; 
+        padding: 8px 8px 8px 45px;
+    }
+    
+    .lista li:last-child{
+        margin-bottom: 0px;
+    }
+
+    .titlu-partea-dreapta{
+        font-size: 10px;
+    }
+    
+}

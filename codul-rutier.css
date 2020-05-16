@@ -2,17 +2,19 @@
 #container{
     background-color: rgb(238, 235, 235);
     width:100%;
-    height: 610px;
+  
+    height:auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-
+	overflow: hidden;
 }
 
-.partea-stanga{
+#partea-stanga{
     border: 1px solid black;
-    height: 610px;
+
+    height:auto;
     width: 27%;
     margin-left: 10px;
     position: absolute;
@@ -20,13 +22,13 @@
     background-color: rgb(58, 217, 223);
 }
 
-.partea-dreapta{
+#partea-dreapta{
     border: 1px solid black;
     width: 72%;
-    height: 610px;
+    
+    height:auto;
     right: 0;
     position: absolute;
-    overflow: auto;
 }
 
 .titlu-partea-stanga{
@@ -35,6 +37,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.titlu-partea-stanga h1{
+    font-size: 1.8vw;
 }
 
 .titlu-partea-dreapta{
@@ -60,10 +66,9 @@
 .lista ol{
     margin-top: 10px;
     list-style-type: none;
-    font-size: 23px;
+    font-size: 1.5vw;
     text-transform: uppercase;
-    position: relative;
-  
+    padding: 10;
 }
 
 .lista li{
@@ -76,14 +81,6 @@
 
 .lista li:last-child{
     margin-bottom: 10px;
-}
-
-.text span {
-    display:none;
-}
-
-.text span:target {
-    display:block;
 }
 
 a{
@@ -140,3 +137,34 @@ h3{
     margin-bottom: 20px;
     background-color: green;
 }
+
+.progress-container {
+  width: 72%;
+  height: 8px;
+  background: #ccc;
+  position: fixed;
+  z-index: 1;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .lista ol{
+        padding: 5px;
+    }
+
+    .lista li{
+        margin-bottom: -10px;
+    }
+
+    #partea-stanga{
+        background-color: #4caf50;
+    }
+    
+    }
