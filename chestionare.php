@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('sistem_chestionare.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -20,51 +20,53 @@
         </section>
 
         <section class="corp-chestionar">
-
+             <?php $interatie=1?>
             <div class="mini-container">
-                <h3>Intrebarea 1/5</h3>
+                <?php echo"<h3> Intrebarea $interatie/26</h3>"?>
             </div>
-
+           
             <div class="mini-container">
-                
-                    <img src="avertizare/2.png" class="imagine" >
-                    <p class="paragraf">Ce fel de indicator este acesta? (In ce categorie se incadreaza?) </p>
+                 <?php
+                   if($index==1){
+                    echo"<img src=avertizare/2.png class=imagine >";
+                    echo "<p class=paragraf> $intrebare </p>";
+                   }
+                   else{
+                    echo "<p class=paragraf>$intrebare </p>";
+                   }
+                    
+                 ?>   
 
             </div>
 
             <div class="mini-container">
                 
                 <div class="raspuns">
-                    <input class="buton-raspuns" type="button" value="A" >
-                    Indicator de avertizare
+                <input type="checkbox" id="A" name="A" class="buton-raspuns"  value="yes">
+                   <?php echo"$raspunsa" ?>
                 </div>
 
                 <div class="raspuns">
-                    <input class="buton-raspuns" type="button" value="B">
-                    Indicator de obligare
+                <input type="checkbox" id="B" name="B" class="buton-raspuns"  value="yes">
+                   <?php echo"$raspunsb" ?>
                 </div>
 
                 <div class="raspuns">
-                    <input class="buton-raspuns" type="button" value="C">
-                    Indicator de interzicere
+                <input type="checkbox" id="C" name="C" class="buton-raspuns"  value="yes">
+                  <?php echo"$raspunsc" ?>
                 </div>
                 
             </div>
 
             <div class="mini-container">
-
+           <form action="sistem_chestionare.php" method="POST">
                 <div class="optiune">
-                    <input class="buton-optiune" type="button" value="Raspunde mai tarziu" >
+                <button name="verifica" type="submit"  class="buton_optiune">Verificare raspuns</button> 
                 </div>
-
                 <div class="optiune">
-                    <input class="buton-optiune" type="button" value="Sterge raspuns">
+                <button name="trimite"  type="submit" class="buton_optiune">Trimite raspuns</button>
                 </div>
-
-                <div class="optiune">
-                    <input class="buton-optiune" type="button" value="Trimite raspuns">
-                </div>
-                
+            </form>                
             </div>
             
         </section>

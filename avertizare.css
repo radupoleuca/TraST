@@ -6,7 +6,7 @@
     padding-bottom: 10px;
 }
 
-.curbaT{
+.spatiu_text1{
     border: rgb(49, 48, 48);
     border-style: double;
     background-color:wheat;
@@ -20,7 +20,7 @@
     position: relative;
 }
 
-.curbaD{
+.spatiu_text2{
     border: rgb(49, 48, 48);
     border-style: double;
     background-color:rgb(250, 232, 129);
@@ -75,7 +75,7 @@
 
 @media only screen and (max-width: 1024px), screen and (max-height: 700px) {
 
-    .curbaD, .curbaT{
+    .spatiu_text2, .spatiu_text1{
         flex-direction: column;
     }
 
