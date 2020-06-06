@@ -101,6 +101,11 @@ session_start(); // ready to go!
             if(mysqli_num_rows($results) == 1)
             {
                 $_SESSION['email'] = $email;
+                if($rezultat= mysqli_query($db, $interogare)){
+                    $row = $rezultat->fetch_assoc();
+                    $_SESSION['nume'] = $row['nume'];
+                    $_SESSION['prenume']=$row['prenume'];
+                }    
                 header('location: index.php');
             }
             else
