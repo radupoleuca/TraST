@@ -71,7 +71,7 @@
                     <form method="POST" action="butoane_reset.php"><div class="buton-reset"><input type="submit" id="btn-reset-2" name="buton2" value="Reset progres"></div></form>
             </div>
             <div class="box">
-                    <div class="title-box"><a href="chestionare.php" target="_self">CHESTIONARE</a></div>
+                    <div class="title-box"><a href="chestionare.php" target="_self">CHESTIONAR</a></div>
                     <a href="chestionare.php" target="_self"><img src="imagini/pri3.jpg" class="img-box"></a>
                     <form method="POST" action="butoane_reset.php"><div class="buton-reset"><input type="submit" id="btn-reset-3" name="buton3" value="Reset progres"></div></form>
             </div>

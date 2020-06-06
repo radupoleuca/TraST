@@ -49,6 +49,7 @@
     height: 120px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .mini-container:nth-child(4){
@@ -58,6 +59,7 @@
     align-items: center;
     justify-content: center;
 }
+
 
 .imagine{
    right: 10px;
