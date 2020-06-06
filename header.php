@@ -12,20 +12,20 @@
 <div id="logo"><img src="imagini/logooo.png" id="imagine-logo"></div>
 
 <div class="topnav" id="myTopnav">  
-      <a href="index.php" class="active">Home</a>
-      <a href="#"><span style="cursor:pointer" onclick="openNav()">About</span></a>
+      <a href="index.php" >Acasa</a>
+      <a href="#"><span style="cursor:pointer" onclick="openNav()">DESPRE</span></a>
       <a href="#contact.html">Contact</a>
        
        
            <?php if(isset($_SESSION['email'])): ?>
                <?php include('online_users.php') ?>
-               <a href="logout.php">Logout</a>
+               <a href="logout.php">DECONECTARE</a>
            <?php else: ?>
                <?php 
                $ses = session_id();
                $sql4    = "DELETE FROM users_status WHERE session='$ses'"; 
                $result4 = mysqli_query($conn, $sql4); ?>
-               <a href="login.php">Login</a>
+               <a href="login.php">AUTENTIFICARE</a>
            <?php endif; ?>
       
            <a href="javascript:void(0);" class="icon" onclick="myFunction()">

@@ -13,7 +13,6 @@ session_start(); // ready to go!
     $parola = "";
     $parola2 = "";
     $errors = array();
-
     //$db = mysqli_connect("fenrir.info.uaic.ro","trastDB","OTuQEKdt8O","trastDB");
 	$db = mysqli_connect("localhost","root","","trastDB");
 
@@ -87,8 +86,6 @@ session_start(); // ready to go!
     {
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $parola = mysqli_real_escape_string($db, $_POST['parola']);
-
-        
         if(empty($email))
             array_push($errors, "email is required");
 
@@ -104,6 +101,11 @@ session_start(); // ready to go!
             if(mysqli_num_rows($results) == 1)
             {
                 $_SESSION['email'] = $email;
+                if($rezultat= mysqli_query($db, $interogare)){
+                    $row = $rezultat->fetch_assoc();
+                    $_SESSION['nume'] = $row['nume'];
+                    $_SESSION['prenume']=$row['prenume'];
+                }    
                 header('location: index.php');
             }
             else
@@ -111,9 +113,5 @@ session_start(); // ready to go!
                 array_push($errors, "Wrong email/password combination");
             }
         }
-    }
-        
-    
-
- 
+    } 
 ?>
