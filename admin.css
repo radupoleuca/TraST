@@ -1,0 +1,114 @@
+#titlu{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 10px;
+    text-shadow: 1px 0px  rgb(188, 236, 236);
+    padding-bottom: 30px;
+}
+
+#tabel_clasament{
+    width: 90%;
+    background-color: rgb(188, 236, 236);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+
+#tabel_clasament td, th{
+    border: 1px solid black;
+    background-color: rgb(188, 236, 236);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#tabel_clasament th{
+    font-size: 20px;
+}
+
+#btn-download-csv{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: rgb(188, 236, 236);
+    font-size: 20px;
+}
+
+#btn-download-csv:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+input[type=text], textarea {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+
+
+
+#sterge_utilizator input{
+    float: left;
+}
+
+#sterge_comentarii input{
+    float: left;
+}
+
+#comentarii_utilizator input{
+    float: left;
+}
+
+
+
+
+input[type=submit]{
+    background-color: rgb(64, 139, 67);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+input[type=submit] {
+    background-color: #45a049;
+}
+
+
+
+
+#tabel_comentarii{
+    padding-top: 20px;
+    min-width: 40%;
+    width: auto;
+    float: left;
+    padding-bottom: 20px;
+    
+}
+
+
+#tabel_comentarii td, th{
+    background-color: rgb(226, 231, 231);
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#tabel_comentarii th{
+    font-size: 15px;
+}
