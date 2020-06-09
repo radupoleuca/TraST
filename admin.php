@@ -1,7 +1,7 @@
 <?php include ('db_connect.php') ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="admin.css">
@@ -31,6 +31,11 @@
                 $query = mysqli_query($conn, $sql); 
                 
                 while($row = mysqli_fetch_array($query)){
+
+                    if($row['progres_total'] == 2400)
+                        $progres = 100;
+                    else
+                        $progres =  $row['progres_total']/100*4;
                     
                     $id_c = $row['id'];
                     $sql3 = "SELECT * FROM users_status WHERE id='$id_c'";
@@ -40,14 +45,15 @@
                         $on = "DA";
                     else
                         $on = "NU"; 
-                
+                       
+
                     echo  "
                         <tr>
                             <td>".$row['id']."</td>
                             <td>".$row['nume']."</td>
                             <td>".$row['prenume']."</td>
                             <td>".$row['email']."</td>
-                            <td>".$row['progres_total']/100*5.55 . "% </td>
+                            <td>".$progres. "% </td>
                             <td>".$on."</td>
                             <td>".$row['data_inreg']."</td>
                         </tr> 
@@ -85,16 +91,16 @@
         <h2>Vezi comentariile unui utilizator </h2>
         <h3>Utilizatorul neautentificat (anonim) are id-ul 0</h3>
             <form method="post" action="admin.php"> 
-                <input type="text" name="id" placeholder="Id-ul utilizatorului"></div>
+                <input type="text" name="id" placeholder="Id-ul utilizatorului">
                 <input type="submit" name="cauta_user" value="Cauta">    
             </form>
             <br>
         </div>
-
+<br>
         <div id="sterge_comentarii">
         <h2>Sterge comentariile unui utilizator</h2>
             <form method="post" action="admin.php"> 
-                <input type="text" name="id_com" placeholder="Id-ul comentariului utilizatorului"></div>
+                <input type="text" name="id_com" placeholder="Id-ul comentariului utilizatorului">
                 <input type="submit" name="sterge_comentariu" value="Sterge">    
             </form>
             <br>

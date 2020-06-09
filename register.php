@@ -1,9 +1,10 @@
 <?php include('server.php') ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Register</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
@@ -20,19 +21,19 @@
            <div class="log">     
 
            <label for="nume"><b><i>Nume: </i></b></label>
-           <input type="text" name="nume" required value="<?php echo $nume; ?>">
+           <input id="nume" type="text" name="nume" required value="<?php echo $nume; ?>">
 
            <label for="prenume"><b><i>Prenume: </i></b></label>
-           <input type="text" name="prenume" required value="<?php echo $prenume; ?>">
+           <input id="prenume" type="text" name="prenume" required value="<?php echo $prenume; ?>">
 
            <label for="email"><b><i>E-mail: </i></b></label>
-           <input type="text" name="email" required value="<?php echo $email; ?>" >
+           <input id="email" type="text" name="email" required value="<?php echo $email; ?>" >
 
            <label for="parola"><b><i>Parola: </i></b></label>
-           <input type="password" name="parola" required>
+           <input id="parola" type="password" name="parola" required>
 
            <label for="parola2"><b><i>Confirmare parola: </i></b></label>
-           <input type="password" name="parola2" required>
+           <input id="parola2" type="password" name="parola2" required>
 
            
            <button type="submit" class="registerButton" name="reg_user">Register</button>

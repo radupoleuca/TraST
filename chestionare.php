@@ -1,10 +1,11 @@
 <?php include 'server.php'; ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="chestionare.css">
+		<link rel="stylesheet" type="text/css" href="header.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
@@ -88,7 +89,7 @@
             </div>
            
             <div class="mini-container" id="intrebare">
-                 <img src="avertizare/2.png" class="imagine">
+                 <img src="avertizare/2.png" class="imagine" alt="Imagine">
                  <p class="paragraf">Ce fel de indicator este acesta? (In ce categorie se incadreaza?)</p>
             </div>
 

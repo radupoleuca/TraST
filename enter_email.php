@@ -1,7 +1,7 @@
 <?php include('server.php') ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Enter email</title>
     <link rel="stylesheet" type="text/css" href="enter_email.css">

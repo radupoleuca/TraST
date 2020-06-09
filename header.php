@@ -1,15 +1,5 @@
 <?php include ('db_connect.php') ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="header.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-<div id="logo"><img src="imagini/logooo.png" id="imagine-logo"></div>
+<div id="logo"><img src="imagini/logooo.png" id="imagine-logo" alt="Imagine"></div>
 
 <div class="topnav" id="myTopnav">  
       <?php if(isset($_SESSION['email']) && $_SESSION['email'] == "raducupoleuca@yahoo.com"): ?>
@@ -49,8 +39,9 @@ function myFunction() {
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-        <a href="#">Scholarity HTML</a>
-        <a href="#">Diagrams</a>
+        <a href="ghid_utilizare.html">Ghid de utilizare-TraST</a>
+        <a href="raport_frontend-backend.html">Raport-TraST</a>
+        <a href="diagrame.html">Diagrama</a>
     </div>
 </div>
 
@@ -64,5 +55,4 @@ function closeNav() {
 }
 </script>
 
-</body>
-</html>
+

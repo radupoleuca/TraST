@@ -8,7 +8,7 @@ include 'server.php';
             $intrebare=$row['intrebare'];
        } 
        if($index==1){
-           echo"<img src=avertizare/2.png class=imagine>";
+           echo"<img src=avertizare/2.png class=imagine alt=Imagine>";
        }
       
        echo"<p class=paragraf> $intrebare</p>";  } 

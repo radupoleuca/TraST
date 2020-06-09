@@ -9,9 +9,9 @@ if(isset($_POST['submit']))
     $subiect = $_POST['subiect'];
     $mesaj = $_POST['mesaj'];
 
-    $mailTo = "radu.poleuca23@yahoo.com";
+    $mailTo = "raducupoleuca@yahoo.com";
     $headers = "From: TraST - ".$mailFrom;
-    $txt = "Ai primit un e-mail de la ".$nume." ".$prenume".\n\n".$mesaj;
+    $txt = "Ai primit un e-mail de la ".$nume." ".$prenume.".\n\n".$mesaj;
 
     mail($mailTo, $subiect, $txt, $headers);
 

@@ -1,7 +1,7 @@
 <?php include ('db_connect.php') ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="clasament.css">
@@ -51,7 +51,7 @@
         </div>
 
         
-        <script type="text/javascript" src="descarca_csv.js"></script>
+        <script src="descarca_csv.js"></script>
     </body>
 </html>
 

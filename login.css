@@ -59,18 +59,8 @@ button:hover {
 
 h3{
     text-align: center;
-    text-size-adjust: 1px;
+   
 }
 
-/*
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-     
-       width: 100%;
-    }
-  }
+
     
