@@ -21,19 +21,4 @@
  
 }  
 
-// function putComm(){
-//  $conn=new mysqli("127.0.0.1","root","","trastbd");
-//   $sql="SELECT nume, comm FROM comments;";
-//   if($result=mysqli_query($conn,$sql)){
-//     while($row = $result->fetch_assoc())
-//     {   
-//         echo "<div class = mesaj_box>";
-//           $comment_n=$row['nume'];
-//           $comment=$row['comm'];
-//           echo( "$comment_n: $comment<p>");
-//         echo "</div>";
-//     }
-//  } 
-// }
-
 ?>
